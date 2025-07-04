@@ -1,0 +1,258 @@
+{
+  "spec_version": "1.0",
+  "website": {
+    "name": "tech-insights-blog",
+    "type": "blog",
+    "title": "科技洞察 - 探索前沿技术趋势",
+    "description": "专注于前沿科技资讯、编程技术分享和行业深度分析的技术博客",
+    "domain": "techinsights.com",
+    "language": "zh-CN",
+    "analytics": {
+      "google_analytics": "G-XXXXXXXXXX",
+      "plausible": false
+    }
+  },
+  "business": {
+    "name": "科技洞察",
+    "tagline": "探索前沿，分享智慧",
+    "industry": "technology",
+    "description": "科技洞察是一个专注于前沿科技资讯、编程技术分享和行业深度分析的技术博客。我们致力于为技术从业者和科技爱好者提供有价值的内容和见解。",
+    "contact": {
+      "email": "contact@techinsights.com",
+      "social": {
+        "github": "https://github.com/techinsights",
+        "twitter": "https://twitter.com/techinsights",
+        "linkedin": "https://linkedin.com/company/techinsights"
+      }
+    }
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "style": "minimal",
+      "layout": "center",
+      "content": {
+        "headline": "探索前沿技术趋势",
+        "subtitle": "分享有价值的技术洞察，连接开发者社区",
+        "cta_primary": {
+          "text": "阅读文章",
+          "href": "#blog",
+          "style": "primary"
+        },
+        "cta_secondary": {
+          "text": "订阅更新",
+          "href": "#newsletter",
+          "style": "outline"
+        }
+      }
+    },
+    "about": {
+      "enabled": true,
+      "title": "关于科技洞察",
+      "content": "科技洞察创立的初衷是为技术社区提供高质量的内容和深度思考。我们相信技术的力量可以改变世界，而知识分享是推动技术进步的重要力量。在这里，你可以找到最新的技术趋势分析、实用的编程技巧，以及行业深度思考。",
+      "stats": [
+        { "number": "500+", "label": "技术文章" },
+        { "number": "10K+", "label": "订阅读者" },
+        { "number": "50+", "label": "技术话题" },
+        { "number": "3", "label": "年运营经验" }
+      ]
+    },
+    "features": {
+      "enabled": true,
+      "title": "内容特色",
+      "subtitle": "我们专注的技术领域",
+      "layout": "grid",
+      "columns": 3,
+      "items": [
+        {
+          "title": "前端技术",
+          "description": "React、Vue、Next.js等现代前端框架和工具的深度解析",
+          "icon": "⚛️",
+          "color": "#06b6d4"
+        },
+        {
+          "title": "后端架构",
+          "description": "微服务、云原生、数据库设计等后端技术实践分享",
+          "icon": "🏗️",
+          "color": "#10b981"
+        },
+        {
+          "title": "AI与机器学习",
+          "description": "人工智能、机器学习算法和应用案例分析",
+          "icon": "🤖",
+          "color": "#6366f1"
+        },
+        {
+          "title": "DevOps实践",
+          "description": "CI/CD、容器化、自动化部署的最佳实践",
+          "icon": "🔧",
+          "color": "#f59e0b"
+        },
+        {
+          "title": "行业洞察",
+          "description": "技术趋势分析、行业发展动态和未来展望",
+          "icon": "📈",
+          "color": "#ef4444"
+        },
+        {
+          "title": "开源项目",
+          "description": "优秀开源项目推荐和源码解析",
+          "icon": "🌟",
+          "color": "#8b5cf6"
+        }
+      ]
+    },
+    "pricing": {
+      "enabled": false
+    },
+    "team": {
+      "enabled": true,
+      "title": "作者团队",
+      "members": [
+        {
+          "name": "李明",
+          "role": "主编",
+          "bio": "10年+全栈开发经验，专注于现代Web技术栈和云原生架构。",
+          "avatar": "/images/author-liming.jpg",
+          "social": {
+            "github": "https://github.com/liming",
+            "twitter": "https://twitter.com/liming"
+          }
+        },
+        {
+          "name": "张颖",
+          "role": "AI技术作者",
+          "bio": "机器学习工程师，专注于深度学习和自然语言处理领域。",
+          "avatar": "/images/author-zhangying.jpg",
+          "social": {
+            "github": "https://github.com/zhangying",
+            "linkedin": "https://linkedin.com/in/zhangying"
+          }
+        },
+        {
+          "name": "王强",
+          "role": "DevOps专家",
+          "bio": "资深运维工程师，专注于云原生技术和自动化运维。",
+          "avatar": "/images/author-wangqiang.jpg",
+          "social": {
+            "github": "https://github.com/wangqiang"
+          }
+        }
+      ]
+    },
+    "testimonials": {
+      "enabled": true,
+      "title": "读者反馈",
+      "items": [
+        {
+          "content": "科技洞察的文章质量很高，每篇都有很强的实用性。作为一名前端开发者，从中学到了很多。",
+          "author": "陈开发",
+          "role": "前端工程师",
+          "company": "互联网公司",
+          "avatar": "/images/reader-1.jpg"
+        },
+        {
+          "content": "这里的AI技术文章非常专业，帮助我在机器学习领域快速成长。",
+          "author": "刘算法",
+          "role": "算法工程师",
+          "company": "AI公司",
+          "avatar": "/images/reader-2.jpg"
+        },
+        {
+          "content": "订阅科技洞察已经两年了，是我技术成长路上的重要伙伴。",
+          "author": "赵架构",
+          "role": "技术架构师",
+          "company": "金融科技",
+          "avatar": "/images/reader-3.jpg"
+        }
+      ]
+    },
+    "blog": {
+      "enabled": true,
+      "title": "最新文章",
+      "subtitle": "探索最新的技术趋势和实践"
+    },
+    "faq": {
+      "enabled": true,
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "如何订阅博客更新？",
+          "answer": "您可以通过邮件订阅我们的最新文章更新，或者关注我们的社交媒体账号获取实时动态。"
+        },
+        {
+          "question": "可以投稿吗？",
+          "answer": "我们欢迎高质量的技术文章投稿。请通过邮件联系我们，并附上您的文章大纲和简历。"
+        },
+        {
+          "question": "文章更新频率如何？",
+          "answer": "我们通常每周发布2-3篇高质量的技术文章，涵盖不同的技术领域。"
+        },
+        {
+          "question": "是否提供技术咨询服务？",
+          "answer": "我们的作者团队可以提供技术咨询服务，具体请通过邮件联系我们了解详情。"
+        }
+      ]
+    },
+    "contact": {
+      "enabled": true,
+      "title": "联系我们",
+      "subtitle": "有想法、建议或合作意向？我们很乐意听到您的声音",
+      "form": {
+        "enabled": true,
+        "fields": ["name", "email", "company", "message"]
+      },
+      "info": {
+        "enabled": true,
+        "email": "contact@techinsights.com"
+      }
+    }
+  },
+  "design": {
+    "theme": "minimal",
+    "layout": "single-page",
+    "colors": {
+      "primary": "#1f2937",
+      "secondary": "#6b7280",
+      "accent": "#06b6d4",
+      "background": "#ffffff",
+      "text": "#111827"
+    },
+    "typography": {
+      "font_family": "Inter",
+      "headings": "Inter"
+    },
+    "spacing": "comfortable",
+    "border_radius": "small",
+    "animations": false
+  },
+  "tech_stack": {
+    "framework": "next.js",
+    "ui_library": "tailwind-shadcn",
+    "deployment": "vercel",
+    "analytics": "google-analytics",
+    "cms": "contentful"
+  },
+  "seo": {
+    "meta_title": "科技洞察 - 探索前沿技术趋势的技术博客",
+    "meta_description": "专注于前沿科技资讯、编程技术分享和行业深度分析。为技术从业者提供有价值的内容和见解。",
+    "keywords": ["技术博客", "编程技术", "前端开发", "后端架构", "AI机器学习", "DevOps", "技术趋势"],
+    "open_graph": {
+      "title": "科技洞察 - 技术博客",
+      "description": "探索前沿，分享智慧",
+      "image": "/images/blog-og.jpg"
+    },
+    "structured_data": true
+  },
+  "performance": {
+    "lazy_loading": true,
+    "image_optimization": true,
+    "code_splitting": true,
+    "caching": "aggressive"
+  },
+  "security": {
+    "https_only": true,
+    "content_security_policy": true,
+    "xss_protection": true
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "spec_version": "1.0",
+  "website": {
+    "name": "zhang-san-portfolio",
+    "type": "portfolio",
+    "title": "张三 - 全栈开发者",
+    "description": "专注于现代Web技术的全栈开发者，擅长React、Node.js和云原生应用开发",
+    "language": "zh-CN"
+  },
+  "business": {
+    "name": "张三",
+    "tagline": "代码创造价值，技术改变世界",
+    "industry": "technology",
+    "description": "5年+全栈开发经验，专注于现代Web技术栈。擅长React、Next.js、Node.js、TypeScript等技术，热爱开源，致力于创造优雅高效的软件解决方案。",
+    "contact": {
+      "email": "zhangsan@example.com",
+      "phone": "+86 138-0013-8000",
+      "address": "上海市浦东新区",
+      "social": {
+        "github": "https://github.com/zhangsan",
+        "linkedin": "https://linkedin.com/in/zhangsan",
+        "twitter": "https://twitter.com/zhangsan"
+      }
+    }
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "style": "minimal",
+      "layout": "left",
+      "content": {
+        "headline": "张三",
+        "subtitle": "全栈开发者 & 技术爱好者",
+        "cta_primary": {
+          "text": "查看作品",
+          "href": "#portfolio",
+          "style": "primary"
+        },
+        "cta_secondary": {
+          "text": "联系我",
+          "href": "#contact",
+          "style": "outline"
+        }
+      },
+      "media": {
+        "type": "image",
+        "src": "/images/avatar.jpg",
+        "alt": "张三头像"
+      }
+    },
+    "about": {
+      "enabled": true,
+      "title": "关于我",
+      "content": "我是一名充满热情的全栈开发者，拥有5年+的软件开发经验。专注于现代Web技术栈，从前端用户界面到后端系统架构，我都能胜任。我相信优秀的代码不仅要解决问题，更要优雅易维护。",
+      "stats": [
+        { "number": "50+", "label": "完成项目" },
+        { "number": "5+", "label": "工作年限" },
+        { "number": "10+", "label": "技术栈" },
+        { "number": "100%", "label": "客户满意度" }
+      ]
+    },
+    "features": {
+      "enabled": true,
+      "title": "核心技能",
+      "subtitle": "我擅长的技术领域",
+      "layout": "grid",
+      "columns": 3,
+      "items": [
+        {
+          "title": "前端开发",
+          "description": "React, Next.js, Vue.js, TypeScript, Tailwind CSS",
+          "icon": "💻",
+          "color": "#06b6d4"
+        },
+        {
+          "title": "后端开发", 
+          "description": "Node.js, Express, Python, PostgreSQL, MongoDB",
+          "icon": "⚙️",
+          "color": "#10b981"
+        },
+        {
+          "title": "云原生",
+          "description": "Docker, Kubernetes, AWS, Vercel, CI/CD",
+          "icon": "☁️",
+          "color": "#6366f1"
+        },
+        {
+          "title": "移动开发",
+          "description": "React Native, Flutter, 跨平台应用开发",
+          "icon": "📱",
+          "color": "#f59e0b"
+        },
+        {
+          "title": "数据库设计",
+          "description": "关系型和非关系型数据库设计与优化",
+          "icon": "🗄️",
+          "color": "#ef4444"
+        },
+        {
+          "title": "系统架构",
+          "description": "微服务架构、API设计、性能优化",
+          "icon": "🏗️",
+          "color": "#8b5cf6"
+        }
+      ]
+    },
+    "pricing": {
+      "enabled": true,
+      "title": "服务价格",
+      "subtitle": "灵活的合作方式，满足不同项目需求",
+      "plans": [
+        {
+          "name": "咨询服务",
+          "price": "¥500",
+          "period": "小时",
+          "description": "技术咨询、代码审查、架构设计",
+          "features": [
+            "技术方案咨询",
+            "代码质量评估", 
+            "架构设计建议",
+            "最佳实践指导"
+          ],
+          "cta": "咨询预约",
+          "popular": false
+        },
+        {
+          "name": "项目开发",
+          "price": "面议",
+          "period": "项目",
+          "description": "完整项目开发，从设计到部署",
+          "features": [
+            "需求分析",
+            "UI/UX设计",
+            "前后端开发",
+            "测试部署",
+            "技术支持"
+          ],
+          "cta": "项目合作",
+          "popular": true
+        },
+        {
+          "name": "长期合作",
+          "price": "面议",
+          "period": "月",
+          "description": "长期技术合作伙伴关系",
+          "features": [
+            "专属技术支持",
+            "定期技术更新",
+            "优先响应",
+            "团队培训",
+            "持续优化"
+          ],
+          "cta": "深度合作",
+          "popular": false
+        }
+      ]
+    },
+    "testimonials": {
+      "enabled": true,
+      "title": "客户评价",
+      "items": [
+        {
+          "content": "张三的技术能力非常出色，项目交付质量超出预期，是值得信赖的技术伙伴。",
+          "author": "李总",
+          "role": "CTO",
+          "company": "科技创新公司",
+          "avatar": "/images/client-1.jpg"
+        },
+        {
+          "content": "合作过程中沟通顺畅，技术方案专业，帮助我们团队提升了很多。",
+          "author": "王经理",
+          "role": "产品经理",
+          "company": "互联网公司",
+          "avatar": "/images/client-2.jpg"
+        }
+      ]
+    },
+    "team": {
+      "enabled": false
+    },
+    "blog": {
+      "enabled": true,
+      "title": "技术博客",
+      "subtitle": "分享我的技术见解和实践经验"
+    },
+    "faq": {
+      "enabled": true,
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "你主要使用什么技术栈？",
+          "answer": "我主要使用React/Next.js作为前端框架，Node.js作为后端，配合TypeScript、Tailwind CSS等现代工具。数据库方面熟练使用PostgreSQL和MongoDB。"
+        },
+        {
+          "question": "项目开发周期一般多长？",
+          "answer": "这取决于项目复杂度。简单的展示网站通常1-2周，复杂的Web应用可能需要1-3个月。我会在项目开始前提供详细的时间规划。"
+        },
+        {
+          "question": "是否提供后期维护服务？",
+          "answer": "是的，我提供项目交付后的技术支持和维护服务，包括bug修复、功能更新、性能优化等。"
+        }
+      ]
+    },
+    "contact": {
+      "enabled": true,
+      "title": "联系我",
+      "subtitle": "有项目想法？让我们聊聊如何实现它",
+      "form": {
+        "enabled": true,
+        "fields": ["name", "email", "company", "message"]
+      },
+      "info": {
+        "enabled": true,
+        "address": "上海市浦东新区张江高科技园区",
+        "phone": "+86 138-0013-8000",
+        "email": "zhangsan@example.com"
+      }
+    }
+  },
+  "design": {
+    "theme": "minimal",
+    "layout": "single-page",
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#6b7280",
+      "accent": "#06b6d4",
+      "background": "#ffffff",
+      "text": "#111827"
+    },
+    "typography": {
+      "font_family": "Inter",
+      "headings": "Inter"
+    },
+    "spacing": "comfortable",
+    "border_radius": "small",
+    "animations": true
+  },
+  "tech_stack": {
+    "framework": "next.js",
+    "ui_library": "tailwind-shadcn",
+    "deployment": "vercel",
+    "analytics": "none",
+    "cms": "none"
+  },
+  "seo": {
+    "meta_title": "张三 - 全栈开发者 | React、Node.js专家",
+    "meta_description": "5年+全栈开发经验，专注现代Web技术。提供React、Node.js、云原生应用开发服务。",
+    "keywords": ["全栈开发", "React开发", "Node.js", "前端开发", "后端开发", "技术咨询"],
+    "open_graph": {
+      "title": "张三 - 全栈开发者",
+      "description": "专注现代Web技术的全栈开发者",
+      "image": "/images/portfolio-og.jpg"
+    },
+    "structured_data": true
+  },
+  "performance": {
+    "lazy_loading": true,
+    "image_optimization": true,
+    "code_splitting": true,
+    "caching": "moderate"
+  },
+  "security": {
+    "https_only": true,
+    "content_security_policy": true,
+    "xss_protection": true
+  }
+}

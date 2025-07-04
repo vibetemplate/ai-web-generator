@@ -1,0 +1,720 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vibetemplate/vibetemplate/blob/master/web/schemas/website-config.schema.json",
+  "title": "Website Configuration Schema",
+  "description": "Schema for website generator configuration files",
+  "type": "object",
+  "required": ["spec_version", "website", "business", "sections", "tech_stack"],
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "enum": ["1.0"],
+      "description": "配置文件规范版本"
+    },
+    "website": {
+      "type": "object",
+      "required": ["name", "type", "title", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "网站唯一标识，用于文件名"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["company", "portfolio", "restaurant", "blog"],
+          "description": "网站类型"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "网站标题"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "网站描述"
+        },
+        "domain": {
+          "type": "string",
+          "format": "hostname",
+          "description": "网站域名"
+        },
+        "language": {
+          "type": "string",
+          "default": "zh-CN",
+          "description": "网站语言"
+        },
+        "analytics": {
+          "type": "object",
+          "properties": {
+            "google_analytics": {
+              "type": "string",
+              "pattern": "^G-[A-Z0-9]+$"
+            },
+            "plausible": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      }
+    },
+    "business": {
+      "type": "object",
+      "required": ["name", "tagline"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "企业/个人名称"
+        },
+        "tagline": {
+          "type": "string",
+          "minLength": 1,
+          "description": "宣传语/标语"
+        },
+        "industry": {
+          "type": "string",
+          "description": "行业分类"
+        },
+        "founded": {
+          "type": "string",
+          "description": "成立时间"
+        },
+        "description": {
+          "type": "string",
+          "description": "详细描述"
+        },
+        "logo": {
+          "type": "object",
+          "properties": {
+            "light": {
+              "type": "string",
+              "description": "浅色主题Logo路径"
+            },
+            "dark": {
+              "type": "string",
+              "description": "深色主题Logo路径"
+            }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "联系邮箱"
+            },
+            "phone": {
+              "type": "string",
+              "description": "联系电话"
+            },
+            "address": {
+              "type": "string",
+              "description": "联系地址"
+            },
+            "social": {
+              "type": "object",
+              "properties": {
+                "github": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "twitter": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "linkedin": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "facebook": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "instagram": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "hero": {
+          "type": "object",
+          "required": ["enabled"],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "style": {
+              "type": "string",
+              "enum": ["gradient", "minimal", "video", "image"],
+              "default": "gradient"
+            },
+            "layout": {
+              "type": "string",
+              "enum": ["center", "left", "right"],
+              "default": "center"
+            },
+            "background": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["gradient", "image", "video", "color"]
+                },
+                "colors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "type": "object",
+              "properties": {
+                "headline": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
+                },
+                "cta_primary": {
+                  "$ref": "#/$defs/cta_button"
+                },
+                "cta_secondary": {
+                  "$ref": "#/$defs/cta_button"
+                }
+              }
+            },
+            "media": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["image", "video"]
+                },
+                "src": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "layout": {
+              "type": "string",
+              "enum": ["grid", "list", "carousel"],
+              "default": "grid"
+            },
+            "columns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4,
+              "default": 3
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["title", "description"],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "about": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["number", "label"],
+                "properties": {
+                  "number": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "pricing": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "plans": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "price", "features", "cta"],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "string"
+                  },
+                  "period": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "features": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "cta": {
+                    "type": "string"
+                  },
+                  "popular": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "team": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "members": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "role"],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "type": "string"
+                  },
+                  "avatar": {
+                    "type": "string"
+                  },
+                  "social": {
+                    "type": "object",
+                    "properties": {
+                      "linkedin": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "twitter": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "github": {
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "testimonials": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["content", "author"],
+                "properties": {
+                  "content": {
+                    "type": "string"
+                  },
+                  "author": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "string"
+                  },
+                  "company": {
+                    "type": "string"
+                  },
+                  "avatar": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "blog": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            }
+          }
+        },
+        "faq": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["question", "answer"],
+                "properties": {
+                  "question": {
+                    "type": "string"
+                  },
+                  "answer": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "form": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["name", "email", "phone", "company", "message"]
+                  }
+                }
+              }
+            },
+            "info": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "design": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string",
+          "enum": ["modern", "minimal", "corporate", "creative"],
+          "default": "modern"
+        },
+        "layout": {
+          "type": "string",
+          "enum": ["single-page", "multi-page"],
+          "default": "single-page"
+        },
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "secondary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "accent": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "background": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "text": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "font_family": {
+              "type": "string",
+              "default": "Inter"
+            },
+            "headings": {
+              "type": "string",
+              "default": "Space Grotesk"
+            }
+          }
+        },
+        "spacing": {
+          "type": "string",
+          "enum": ["compact", "comfortable", "spacious"],
+          "default": "comfortable"
+        },
+        "border_radius": {
+          "type": "string",
+          "enum": ["none", "small", "medium", "large"],
+          "default": "medium"
+        },
+        "animations": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "tech_stack": {
+      "type": "object",
+      "required": ["framework", "ui_library"],
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": ["next.js", "astro", "vue", "nuxt"],
+          "default": "next.js"
+        },
+        "ui_library": {
+          "type": "string",
+          "enum": ["tailwind-shadcn", "tailwind-radix", "mui", "antd", "chakra-ui"],
+          "default": "tailwind-shadcn"
+        },
+        "deployment": {
+          "type": "string",
+          "enum": ["vercel", "netlify", "aws", "static"],
+          "default": "vercel"
+        },
+        "analytics": {
+          "type": "string",
+          "enum": ["google-analytics", "plausible", "none"],
+          "default": "none"
+        },
+        "cms": {
+          "type": "string",
+          "enum": ["strapi", "contentful", "sanity", "none"],
+          "default": "none"
+        }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "meta_title": {
+          "type": "string"
+        },
+        "meta_description": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "open_graph": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            }
+          }
+        },
+        "structured_data": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "lazy_loading": {
+          "type": "boolean",
+          "default": true
+        },
+        "image_optimization": {
+          "type": "boolean",
+          "default": true
+        },
+        "code_splitting": {
+          "type": "boolean",
+          "default": true
+        },
+        "caching": {
+          "type": "string",
+          "enum": ["aggressive", "moderate", "minimal"],
+          "default": "moderate"
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "https_only": {
+          "type": "boolean",
+          "default": true
+        },
+        "content_security_policy": {
+          "type": "boolean",
+          "default": true
+        },
+        "xss_protection": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cta_button": {
+      "type": "object",
+      "required": ["text", "href"],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "style": {
+          "type": "string",
+          "enum": ["primary", "secondary", "outline"],
+          "default": "primary"
+        }
+      }
+    }
+  }
+}

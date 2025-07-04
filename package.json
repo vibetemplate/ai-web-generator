@@ -1,0 +1,40 @@
+{
+  "name": "ai-web-generator",
+  "version": "1.0.0",
+  "description": "🚀 AI-powered website generator - Transform prompts into production-ready websites with modern tech stack",
+  "main": "index.js",
+  "scripts": {
+    "validate": "ajv validate -s schemas/website-config.schema.json -d examples/*/website-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibetemplate/ai-web-generator.git"
+  },
+  "keywords": [
+    "ai",
+    "website-generator",
+    "nextjs",
+    "typescript",
+    "tailwind",
+    "react",
+    "automation",
+    "low-code",
+    "artificial-intelligence",
+    "web-development",
+    "code-generation",
+    "developer-tools"
+  ],
+  "author": "VibeTemplate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vibetemplate/ai-web-generator/issues"
+  },
+  "homepage": "https://github.com/vibetemplate/ai-web-generator#readme",
+  "devDependencies": {
+    "ajv-cli": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

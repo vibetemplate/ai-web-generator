@@ -1,0 +1,255 @@
+{
+  "spec_version": "1.0",
+  "website": {
+    "name": "delicious-garden-restaurant",
+    "type": "restaurant",
+    "title": "美味花园 - 正宗川菜餐厅",
+    "description": "传承川菜精髓，地道四川味道。环境优雅，服务贴心，是聚餐宴请的理想之选。",
+    "domain": "deliciousgarden.com",
+    "language": "zh-CN"
+  },
+  "business": {
+    "name": "美味花园",
+    "tagline": "传承川菜精髓，品味地道四川",
+    "industry": "restaurant",
+    "founded": "2018",
+    "description": "美味花园餐厅成立于2018年，专注于正宗川菜的传承与创新。我们的主厨来自四川成都，拥有20年的川菜制作经验，坚持使用最优质的食材，为顾客呈现最地道的四川味道。",
+    "logo": {
+      "light": "/images/logo-light.svg",
+      "dark": "/images/logo-dark.svg"
+    },
+    "contact": {
+      "email": "info@deliciousgarden.com",
+      "phone": "+86 021-1234-5678",
+      "address": "上海市黄浦区南京路步行街168号3楼",
+      "social": {
+        "instagram": "https://instagram.com/deliciousgarden",
+        "facebook": "https://facebook.com/deliciousgarden"
+      }
+    }
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "style": "image",
+      "layout": "center",
+      "background": {
+        "type": "image",
+        "image": "/images/restaurant-hero.jpg"
+      },
+      "content": {
+        "headline": "传承川菜精髓",
+        "subtitle": "品味地道四川味道，享受优雅用餐环境",
+        "cta_primary": {
+          "text": "在线订餐",
+          "href": "#menu",
+          "style": "primary"
+        },
+        "cta_secondary": {
+          "text": "预订座位",
+          "href": "#contact",
+          "style": "outline"
+        }
+      }
+    },
+    "about": {
+      "enabled": true,
+      "title": "关于美味花园",
+      "content": "美味花园餐厅致力于传承正宗川菜文化，我们的主厨团队来自四川成都，拥有丰富的川菜制作经验。餐厅环境优雅舒适，采用传统与现代相结合的装修风格，为您提供难忘的用餐体验。",
+      "image": "/images/restaurant-interior.jpg",
+      "stats": [
+        { "number": "6+", "label": "年服务经验" },
+        { "number": "50+", "label": "招牌菜品" },
+        { "number": "1000+", "label": "满意顾客" },
+        { "number": "4.8", "label": "用户评分" }
+      ]
+    },
+    "features": {
+      "enabled": true,
+      "title": "我们的特色",
+      "subtitle": "为什么选择美味花园",
+      "layout": "grid",
+      "columns": 3,
+      "items": [
+        {
+          "title": "正宗川菜",
+          "description": "主厨来自四川，传承正宗川菜制作工艺，每道菜都是匠心之作。",
+          "icon": "🌶️",
+          "color": "#dc2626"
+        },
+        {
+          "title": "优质食材",
+          "description": "精选新鲜食材，严格把控品质，确保每道菜的口感和营养。",
+          "icon": "🥬",
+          "color": "#16a34a"
+        },
+        {
+          "title": "优雅环境",
+          "description": "装修精美，环境舒适，是朋友聚餐、商务宴请的理想选择。",
+          "icon": "🏮",
+          "color": "#d97706"
+        },
+        {
+          "title": "贴心服务",
+          "description": "专业的服务团队，热情周到的服务，让您宾至如归。",
+          "icon": "👨‍🍳",
+          "color": "#7c3aed"
+        },
+        {
+          "title": "私人包厢",
+          "description": "提供多种规格的私人包厢，满足不同场合的用餐需求。",
+          "icon": "🎋",
+          "color": "#0891b2"
+        },
+        {
+          "title": "在线订餐",
+          "description": "支持在线点餐和外卖服务，方便快捷，足不出户享美食。",
+          "icon": "📱",
+          "color": "#c2410c"
+        }
+      ]
+    },
+    "pricing": {
+      "enabled": false
+    },
+    "team": {
+      "enabled": true,
+      "title": "主厨团队",
+      "members": [
+        {
+          "name": "陈师傅",
+          "role": "主厨",
+          "bio": "来自四川成都，拥有20年川菜制作经验，曾在多家知名川菜餐厅担任主厨。",
+          "avatar": "/images/chef-chen.jpg"
+        },
+        {
+          "name": "李师傅",
+          "role": "副主厨",
+          "bio": "专精麻辣火锅和干锅料理，对香料搭配有独特见解。",
+          "avatar": "/images/chef-li.jpg"
+        },
+        {
+          "name": "王师傅",
+          "role": "点心师傅",
+          "bio": "擅长传统川式点心制作，手艺精湛，深受顾客喜爱。",
+          "avatar": "/images/chef-wang.jpg"
+        }
+      ]
+    },
+    "testimonials": {
+      "enabled": true,
+      "title": "顾客评价",
+      "items": [
+        {
+          "content": "这里的麻婆豆腐太正宗了！口感层次丰富，麻辣鲜香，完全是我在成都吃到的味道。",
+          "author": "张女士",
+          "role": "美食爱好者",
+          "avatar": "/images/customer-1.jpg"
+        },
+        {
+          "content": "环境很棒，服务员非常热情专业。上次在这里办生日宴，朋友们都说很满意。",
+          "author": "李先生",
+          "role": "常客",
+          "avatar": "/images/customer-2.jpg"
+        },
+        {
+          "content": "水煮鱼片新鲜嫩滑，辣度刚好，配菜也很丰富。强烈推荐！",
+          "author": "王小姐",
+          "role": "上班族",
+          "avatar": "/images/customer-3.jpg"
+        }
+      ]
+    },
+    "blog": {
+      "enabled": false
+    },
+    "faq": {
+      "enabled": true,
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "需要提前预订吗？",
+          "answer": "建议提前预订，特别是周末和节假日。您可以通过电话或在线系统预订座位。"
+        },
+        {
+          "question": "有包厢可以预订吗？",
+          "answer": "我们提供多种规格的包厢，可容纳6-20人不等。包厢需提前预订，建议至少提前1天。"
+        },
+        {
+          "question": "支持外卖服务吗？",
+          "answer": "是的，我们提供外卖服务，配送范围覆盖餐厅周边5公里。您可以通过我们的官网或外卖平台下单。"
+        },
+        {
+          "question": "餐厅营业时间是？",
+          "answer": "营业时间：上午11:00-下午2:00，下午5:00-晚上10:00。周末延长至晚上10:30。"
+        },
+        {
+          "question": "支持哪些付款方式？",
+          "answer": "我们支持现金、银行卡、微信支付、支付宝等多种付款方式。"
+        }
+      ]
+    },
+    "contact": {
+      "enabled": true,
+      "title": "联系我们",
+      "subtitle": "预订座位或了解更多信息",
+      "form": {
+        "enabled": true,
+        "fields": ["name", "phone", "email", "message"]
+      },
+      "info": {
+        "enabled": true,
+        "address": "上海市黄浦区南京路步行街168号3楼",
+        "phone": "+86 021-1234-5678",
+        "email": "info@deliciousgarden.com"
+      }
+    }
+  },
+  "design": {
+    "theme": "corporate",
+    "layout": "single-page",
+    "colors": {
+      "primary": "#dc2626",
+      "secondary": "#d97706",
+      "accent": "#16a34a",
+      "background": "#fef7ed",
+      "text": "#451a03"
+    },
+    "typography": {
+      "font_family": "Noto Sans SC",
+      "headings": "Noto Serif SC"
+    },
+    "spacing": "comfortable",
+    "border_radius": "medium",
+    "animations": true
+  },
+  "tech_stack": {
+    "framework": "next.js",
+    "ui_library": "tailwind-shadcn",
+    "deployment": "vercel",
+    "analytics": "google-analytics",
+    "cms": "none"
+  },
+  "seo": {
+    "meta_title": "美味花园 - 上海正宗川菜餐厅 | 预订电话021-1234-5678",
+    "meta_description": "美味花园餐厅，上海南京路正宗川菜，环境优雅，服务贴心。提供包厢预订和外卖服务。",
+    "keywords": ["川菜餐厅", "上海美食", "正宗川菜", "餐厅预订", "包厢宴请", "外卖服务"],
+    "open_graph": {
+      "title": "美味花园 - 正宗川菜餐厅",
+      "description": "传承川菜精髓，品味地道四川",
+      "image": "/images/restaurant-og.jpg"
+    },
+    "structured_data": true
+  },
+  "performance": {
+    "lazy_loading": true,
+    "image_optimization": true,
+    "code_splitting": true,
+    "caching": "moderate"
+  },
+  "security": {
+    "https_only": true,
+    "content_security_policy": true,
+    "xss_protection": true
+  }
+}
