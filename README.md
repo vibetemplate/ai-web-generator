@@ -22,9 +22,9 @@
 我想生成一个现代化的网站。请按照以下步骤操作：
 
 1. **仔细阅读规范文档：**
-   - https://github.com/vibetemplate/vibetemplate/tree/master/web/README.md - 网站生成器概述和架构模式
-   - https://github.com/vibetemplate/vibetemplate/tree/master/web/WEBSITE-SPEC.md - 完整的网站配置规范和字段定义
-   - https://github.com/vibetemplate/vibetemplate/tree/master/web/examples - 参考实现，包括公司官网、作品集、餐厅等示例
+   - https://github.com/vibetemplate/ai-web-generator/blob/main/README.md - 网站生成器概述和架构模式
+   - https://github.com/vibetemplate/ai-web-generator/blob/main/WEBSITE-SPEC.md - 完整的网站配置规范和字段定义
+   - https://github.com/vibetemplate/ai-web-generator/blob/main/examples - 参考实现，包括公司官网、作品集、餐厅等示例
 
 2. **创建合适的网站结构：**
    - 根据WEBSITE-SPEC.md生成有效的website-config.json配置文件
